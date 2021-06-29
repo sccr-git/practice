@@ -84,8 +84,30 @@ p contacts["Joe Smith"][:email]
 p contacts["Sally Johnson"][:phone]
 =end
 
-
+=begin
 arr = ['snow', 'winter', 'ice', 'slippery', 'salted roads', 'white trees']
 
 arr.delete_if {|string| string.start_with?('s', 'w')}
 p arr
+=end
+
+=begin
+a = ['white snow', 'winter wonderland', 'melting ice',
+  'slippery sidewalk', 'salted roads', 'white trees']
+
+new_array = a.map do |word|
+  word.split(' ')
+end
+
+p new_array.flatten
+=end
+
+hash1 = {shoes: "nike", "hat" => "adidas", :hoodie => true}
+hash2 = {"hat" => "adidas", :shoes => "nike", hoodie: true}
+
+if hash1 == hash2
+  puts "These hashes are the same!"
+else
+  puts "These hashes are not the same!"
+end
+
